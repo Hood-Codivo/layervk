@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
+import JoinWaitlistForm from "@/components/JoinWaitlistForm";
 import GeometricShapes from "./GeometricShapes";
 
 const HeroSection = () => {
@@ -57,15 +59,25 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <Button size="lg" className="group">
-              <Zap className="w-4 h-4 mr-2" />
-              Get SDK Access
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button variant="outline" size="lg">
-              <Shield className="w-4 h-4 mr-2" />
-              View Documentation
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="group">
+                  <Zap className="w-4 h-4 mr-2" />
+                  Get SDK Access
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <JoinWaitlistForm />
+              </DialogContent>
+            </Dialog>
+
+            <a href="https://layervk.gitbook.io/untitled/">
+              <Button variant="outline" size="lg">
+                <Shield className="w-4 h-4 mr-2" />
+                View Documentation
+              </Button>
+            </a>
           </motion.div>
 
           {/* Stats */}

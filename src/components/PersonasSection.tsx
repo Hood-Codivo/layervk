@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, DollarSign } from "lucide-react";
+import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
+import JoinWaitlistForm from "@/components/JoinWaitlistForm";
 
 const PersonasSection = () => {
   return (
@@ -67,11 +69,12 @@ const PersonasSection = () => {
                   </p>
                 </div>
               </div>
-
-              <Button variant="outline" className="group/btn">
-                Learn More
-                <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-              </Button>
+              <a href="https://layervk.gitbook.io/untitled/">
+                <Button variant="outline" className="group/btn">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </Button>
+              </a>
             </div>
           </motion.div>
 
@@ -114,11 +117,19 @@ const PersonasSection = () => {
                   </p>
                 </div>
               </div>
-
-              <Button variant="outline" className="group/btn">
-                Get SDK
-                <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-              </Button>
+              <div className="flex flex-col sm:flex-row  gap-4 mb-12">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="group/btn">
+                      Get SDK
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <JoinWaitlistForm />
+                  </DialogContent>
+                </Dialog>
+              </div>
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
+import JoinWaitlistForm from "@/components/JoinWaitlistForm";
 
 const CTASection = () => {
   return (
@@ -59,14 +61,23 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button size="xl" className="group">
-              <Zap className="w-5 h-5" />
-              Get SDK Access
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button variant="outline" size="xl">
-              Read Whitepaper
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="xl" className="group">
+                  <Zap className="w-5 h-5" />
+                  Get SDK Access
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <JoinWaitlistForm />
+              </DialogContent>
+            </Dialog>
+            <a href="https://layervk.gitbook.io/untitled/">
+              <Button variant="outline" size="xl">
+                Read Whitepaper
+              </Button>
+            </a>
           </div>
 
           {/* Trust badges */}

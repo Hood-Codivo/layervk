@@ -4,25 +4,29 @@ const steps = [
   {
     number: "01",
     title: "SDK Integration",
-    description: "Game developer installs the ProjectX SDK into their Unity/Unreal project. Takes 5 minutes.",
+    description:
+      "Game developer installs the LayerVK SDK into their Unity/Unreal project. Takes 5 minutes.",
     tech: "Rust JNI Bridge",
   },
   {
     number: "02",
     title: "Sensor Capture",
-    description: "During an ad impression, the SDK captures 3-axis accelerometer data at 50Hz for 2 seconds.",
+    description:
+      "During an ad impression, the SDK captures 3-axis accelerometer data at 50Hz for 2 seconds.",
     tech: "50Hz × 2s = 100 samples",
   },
   {
     number: "03",
     title: "Local Processing",
-    description: "Variance and FFT calculations happen on-device. Raw data never leaves the phone.",
+    description:
+      "Variance and FFT calculations happen on-device. Raw data never leaves the phone.",
     tech: "SP1 ZK Circuit",
   },
   {
     number: "04",
     title: "Proof Generation",
-    description: "A ZK-Receipt is generated proving human presence. Attached to the ad request via OpenRTB.",
+    description:
+      "A ZK-Receipt is generated proving human presence. Attached to the ad request via OpenRTB.",
     tech: "is_human: true",
   },
 ];
@@ -51,7 +55,8 @@ const HowItWorksSection = () => {
             From Sensor to Settlement
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl">
-            Every step is designed for speed, privacy, and cryptographic certainty.
+            Every step is designed for speed, privacy, and cryptographic
+            certainty.
           </p>
         </motion.div>
 
@@ -73,7 +78,9 @@ const HowItWorksSection = () => {
                 {/* Number bubble */}
                 <div className="relative z-10 flex-shrink-0">
                   <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center">
-                    <span className="text-lg font-mono font-bold text-primary">{step.number}</span>
+                    <span className="text-lg font-mono font-bold text-primary">
+                      {step.number}
+                    </span>
                   </div>
                 </div>
 
