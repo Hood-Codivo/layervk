@@ -1,5 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/*", "destination": "/index.html" }
-  ]
+  "buildCommand": "cd proof-of-jitter-main && npm run build",
+  "outputDirectory": "proof-of-jitter-main/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
