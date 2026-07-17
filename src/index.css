@@ -6,72 +6,73 @@
 
 @layer base {
   :root {
-    --background: 0 0% 2%;
-    --foreground: 0 0% 98%;
+    /* Brand scale: Dark Navy #001355 / Navy #003ABA / Blue #0966FF / Sky Blue #7BB6FF / Light Blue #E1F0FE */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 98%;
+    --card: 213 30% 97%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 213 30% 97%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 82 100% 50%;
-    --primary-foreground: 0 0% 2%;
+    --primary: 217 100% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 209 94% 94%;
+    --secondary-foreground: 227 100% 17%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 213 40% 95%;
+    --muted-foreground: 222 20% 40%;
 
-    --accent: 82 100% 50%;
-    --accent-foreground: 0 0% 2%;
+    --accent: 217 100% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 82 100% 50%;
+    --border: 213 30% 88%;
+    --input: 213 30% 88%;
+    --ring: 217 100% 52%;
 
     --radius: 0.5rem;
 
     /* Custom colors */
-    --lime: 82 100% 50%;
-    --lime-glow: 82 100% 60%;
-    --lime-dark: 82 80% 35%;
-    --dark-surface: 0 0% 7%;
-    --darker-surface: 0 0% 4%;
+    --lime: 217 100% 52%;
+    --lime-glow: 213 100% 74%;
+    --lime-dark: 221 100% 36%;
+    --dark-surface: 213 35% 97%;
+    --darker-surface: 213 45% 94%;
 
     /* Gradients */
     --gradient-lime: linear-gradient(
       135deg,
-      hsl(82, 100%, 50%),
-      hsl(82, 100%, 65%)
+      hsl(217, 100%, 52%),
+      hsl(213, 100%, 74%)
     );
-    --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 2%), hsl(0, 0%, 5%));
+    --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(213, 35%, 97%));
     --gradient-glow: radial-gradient(
       ellipse at center,
-      hsl(82, 100%, 50%, 0.15),
+      hsl(217, 100%, 52%, 0.14),
       transparent 70%
     );
 
     /* Shadows */
-    --shadow-lime: 0 0 40px hsl(82, 100%, 50%, 0.3);
-    --shadow-lime-intense: 0 0 60px hsl(82, 100%, 50%, 0.5);
+    --shadow-lime: 0 0 40px hsl(217, 100%, 52%, 0.25);
+    --shadow-lime-intense: 0 0 50px hsl(217, 100%, 52%, 0.4);
 
     /* Typography */
     --font-display: "Space Grotesk", sans-serif;
     --font-mono: "JetBrains Mono", monospace;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 82 100% 50%;
-    --sidebar-primary-foreground: 0 0% 2%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 82 100% 50%;
+    --sidebar-background: 213 30% 97%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 100% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 209 94% 94%;
+    --sidebar-accent-foreground: 227 100% 17%;
+    --sidebar-border: 213 30% 88%;
+    --sidebar-ring: 217 100% 52%;
   }
 }
 
@@ -204,7 +205,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    hsl(82, 100%, 50%, 0.1),
+    hsl(217, 100%, 52%, 0.1),
     transparent
   );
   background-size: 200% 100%;

@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="mb-8">
             <a href="/" className="flex items-center gap-2 mb-4">
               <img
-                src="/images/LayerVK%20Wordmark%203.png"
+                src="/images/LayerVK-Wordmark-Dark.svg"
                 alt="LayerVK logo"
                 className="h-6 md:h-8"
               />

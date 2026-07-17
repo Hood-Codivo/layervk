@@ -20,16 +20,16 @@ const Header = () => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800 shadow-md"
+        className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm"
       >
         <nav className="container mx-auto px-6 py-4 relative">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href="/" className="flex items-center gap-2">
               <img
-                src="/images/LayerVK%20Wordmark%203.png"
+                src="/images/LayerVK-Wordmark-Dark.svg"
                 alt="LayerVK logo"
-                className="h-6 md:h-8"
+                className="h-8 md:h-11"
               />
             </a>
 
@@ -40,7 +40,7 @@ const Header = () => {
                   key={link.name}
                   href={link.href}
                   whileHover={{ scale: 1.05 }}
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
+                  className="text-sm text-gray-600 hover:text-foreground transition-colors"
                 >
                   {link.name}
                 </motion.a>
@@ -61,7 +61,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-white z-50 relative"
+              className="md:hidden text-foreground z-50 relative"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -82,7 +82,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black md:hidden"
+            className="fixed inset-0 z-40 bg-white md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-8">
               {navLinks.map((link) => (
@@ -90,7 +90,7 @@ const Header = () => {
                   key={link.name}
                   href={link.href}
                   whileHover={{ scale: 1.1 }}
-                  className="text-2xl text-gray-300 hover:text-white transition-colors"
+                  className="text-2xl text-gray-600 hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
